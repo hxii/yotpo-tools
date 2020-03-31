@@ -6,11 +6,13 @@ require 'json'
 require 'optparse'
 
 $options = {}
-$ver = '2020.03.30'
+$ver = '2020.03.31'
 
 puts "Pubunpub - mass publishing and unpublishing of reviews."
 puts "made by Paul Glushak"
 puts "version " + $ver
+
+ARGV << '-h' if ARGV.empty?
 
 optparse = OptionParser.new do|opts|
 	opts.banner = 'Usage: pubunpub.rb [options]'
